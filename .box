@@ -1,7 +1,7 @@
 ################################################
 ## WEB SPECIFIC SETTINGS
 ################################################
-document_root: web
+document_root: /
 default_gateway: index.php
 index_list: [index.php]
 
