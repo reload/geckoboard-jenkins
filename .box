@@ -1,0 +1,15 @@
+################################################
+## WEB SPECIFIC SETTINGS
+################################################
+document_root: web
+default_gateway: index.php
+index_list: [index.php]
+
+################################################
+## PHP SPECIFIC SETTINGS
+################################################
+php_display_errors: Off
+php_error_reporting: 'E_ALL ^ E_NOTICE'
+php_extensions: [apc]
+php_short_open_tag: Off
+php_version: 5.3.5
