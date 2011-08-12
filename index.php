@@ -33,7 +33,7 @@ $app->get('/job/{job}/status', function ($job) use ($app) {
 
     // Assemble a status containing build name, stability and health icon
     $status = '<h1>'.$data->displayName.'</h1>' .
-              '<p>'. $data->healthReport[0]->description . '</p>'.
+              '<p class="t-size-x14">'. $data->healthReport[0]->description . '</p>'.
               '<img src="'. $iconUrl . '"/>';
 
     $text->appendChild($doc->createCDATASection($status));
