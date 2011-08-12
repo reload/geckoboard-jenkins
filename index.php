@@ -31,8 +31,9 @@ $app->get('/job/{job}/status', function ($job) use ($app) {
 
     $iconUrl = $app->jenkinsUrl . '/static/' . mt_rand() . '/images/48x48/' . $data->healthReport[0]->iconUrl;
 
-    // Assemble a status containing build name and health icon
+    // Assemble a status containing build name, stability and health icon
     $status = '<h1>'.$data->displayName.'</h1>' .
+              '<p>'. $data->healthReport[0]->description . '</p>'.
               '<img src="'. $iconUrl . '"/>';
 
     $text->appendChild($doc->createCDATASection($status));
