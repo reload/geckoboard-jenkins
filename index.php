@@ -4,6 +4,11 @@ require_once __DIR__.'/vendor/silex.phar';
 
 $app = new Silex\Application();
 
+// Add option for setting debug mode from environment
+if (isset($_SERVER['debug'])) {
+  $app['debug'] = $_SERVER['debug'];
+}
+
 $app->before(function() use ($app) {
   // The URL for the Jenkins instance to use
   $app->jenkinsUrl = "http://jenkins.reload.dk";
