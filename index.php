@@ -47,4 +47,11 @@ $app->get('/job/{job}/status', function ($job) use ($app) {
   return $doc->saveXML();
 });
 
+/**
+ * Frontpage route.
+ */
+$app->get('/', function () use ($app) {
+  return '<h1>Geckoboard Jenkins frontpage</h1>';
+});
+
 $app->run();
